@@ -1,0 +1,300 @@
+@charset "UTF-8";
+html, body, * {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  background-color: #ccb9b9;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 30%;
+  background-color: #4b3bb3;
+}
+
+.nav__list {
+  margin-top: 5rem;
+}
+.nav__list-item {
+  margin: 1rem auto 1.2rem;
+  padding-left: 2rem;
+  list-style-type: none;
+}
+.nav__link {
+  text-decoration: none;
+  color: white;
+  opacity: 0.6;
+  transition: padding 0.4s ease-in-out;
+}
+.nav__link:hover {
+  padding-left: 0.2rem;
+  color: wheat;
+  opacity: 1;
+}
+.nav__active {
+  padding: 0.6rem 0 0.5rem 2rem;
+  background-color: green;
+}
+
+main {
+  font-size: 0.8rem;
+  margin-left: 30%;
+}
+
+.header-flex {
+  display: flex;
+  background-color: white;
+  box-shadow: 1px 2px 7px 1px grey;
+  padding: 0.3rem;
+  justify-content: space-between;
+}
+.header__left-flex {
+  display: grid;
+  place-items: center;
+}
+.header__username {
+  display: grid;
+  place-content: center;
+  padding-right: 1rem;
+}
+.header__bidin {
+  text-transform: capitalize;
+}
+.header__bin, .header__in {
+  font-weight: bold;
+}
+.header__bin {
+  color: blue;
+}
+.header__in {
+  color: red;
+}
+.header__flex-right {
+  display: flex;
+}
+.header__image {
+  width: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+}
+.header__user-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.username {
+  background-color: #c4b4b4;
+  padding: 0.2rem 0.2rem;
+  border-radius: 8vw;
+  text-transform: capitalize;
+}
+
+.main--grid {
+  padding: 1rem;
+}
+
+.dashboard--flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.3rem;
+}
+
+.dashboard, .jan-2020 {
+  text-transform: capitalize;
+}
+
+.jan-2020 {
+  font-style: oblique;
+}
+
+.content--wrapper {
+  margin: 1.3rem 0 1.2rem;
+}
+
+.bids--flex-boxes {
+  display: flex;
+  justify-content: space-around;
+}
+.bids-box {
+  width: 70px;
+  height: 100px;
+  border: none;
+  border-radius: 14px;
+  background: radial-gradient(wheat, blue);
+  padding: 0.2rem;
+}
+.bids-text, .bids-number {
+  text-align: center;
+  color: white;
+}
+.bids-text {
+  font-size: 0.7rem;
+}
+.bids-number {
+  color: blue;
+  padding-top: 0.5rem;
+  font-family: cursive;
+}
+.bids--graph-wrapper {
+  background-color: white;
+  height: 40vh;
+  margin: 1.7rem 0 1rem;
+}
+.bids__graph {
+  margin-top: 2rem;
+}
+
+.graph--image {
+  width: 100%;
+  height: 100%;
+}
+
+.content__aside {
+  margin-top: 4rem;
+  background-color: inherit;
+}
+
+.aside__header {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+}
+.aside__body {
+  box-shadow: 1px 1px 14px 1px grey;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 0.6rem;
+}
+.aside__draft {
+  padding-top: 0.4rem;
+  text-transform: capitalize;
+  color: red;
+  margin: 0.2rem 0 0.3rem 0.2rem;
+}
+.aside__border {
+  margin: 0.9rem 0;
+  border: 1px solid #bdafaf;
+}
+.aside__posts-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.aside__job-title {
+  padding-bottom: 0.2rem;
+  margin: 0.7rem 0 0.1rem;
+}
+.aside__more {
+  text-align: right;
+  padding: 0.6rem 1.2rem 3rem 0;
+}
+.aside__logo {
+  width: 70px;
+  height: 60px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.new-bid {
+  padding: 0.2rem;
+}
+
+.job--title {
+  opacity: 0.7;
+}
+
+.more--bids {
+  text-transform: capitalize;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .main--grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .content--wrapper {
+    display: grid;
+    grid-gap: 12px;
+    margin-top: 3rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .content__main, .content__aside {
+    margin: 0;
+  }
+}
+.nav__link::before, .icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  padding-right: 0.2rem;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+}
+
+.dashboard::before {
+  content: "";
+}
+
+.bids::before {
+  content: "";
+}
+
+.draft::before {
+  content: "";
+}
+
+.user::before {
+  content: "";
+}
+
+.Profile::before {
+  content: "";
+}
+
+.header__bidin::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  padding-right: 0.4rem;
+  color: blue;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+}
+
+.more--bids::after {
+  padding-left: 0.3rem;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+}/*# sourceMappingURL=manifest.css.map */
